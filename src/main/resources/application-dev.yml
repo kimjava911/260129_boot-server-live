@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: ''
+    # 적지 않아도 기본으로 들어감
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      # 개발용 내부 테스트 DB니까 삭제 처리해도 됨 (실제로도 별다른 것 안하면 다 지워짐)
