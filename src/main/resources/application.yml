@@ -1,12 +1,12 @@
 spring:
   application:
     name: boot-server
-  # JPA, H2(??? ?? DB), MySQL
+  # JPA, H2(개발용 내장 DB), MySQL
   profiles:
     active: dev
-    # Docker? ??? ?? ???? ??? ?? prod? ???...
+    # Docker로 빌드할 때나 외부에서 사용할 때는 prod를 주도록...
 
-# ?? ? -> ?? ??
+# 배포 시 -> 서버 포트
 server:
-#  port: 8080
+  #  port: 8080
   port: ${SERVER_PORT:8080}
